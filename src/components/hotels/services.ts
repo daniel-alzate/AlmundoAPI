@@ -8,5 +8,13 @@ export const services = {
         } catch (error) {
             return error
         }
+    },
+    getHotel: async (id: string) => {
+        try {
+            const hotel = await Hotels.findById(id)
+            return hotel
+        } catch (error) {
+            return error;
+        }
     }
 };

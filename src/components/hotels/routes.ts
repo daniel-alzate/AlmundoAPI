@@ -5,5 +5,10 @@ export const hotelRoutes = {
         verb: 'get',
         mountPoint: '/hotels',
         handler: hotelsController.getHotels
+    },
+    getHotel: {
+        verb: 'get',
+        mountPoint: '/hotel/:id',
+        handler: hotelsController.getHotel
     }
 }

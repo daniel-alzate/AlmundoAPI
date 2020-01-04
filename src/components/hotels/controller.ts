@@ -9,5 +9,14 @@ export const hotelsController = {
         } catch (error) {
             next({ error });
         }
+    },
+    getHotel: async (req: Request, res: Response, next: NextFunction) => {
+        const { id } = req.params;
+        try {
+            const hotel = await services.getHotel(id)
+            res.send({ hotel })
+        } catch (error) {
+            next({ error });
+        }
     }
 };
