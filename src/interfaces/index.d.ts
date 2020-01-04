@@ -6,3 +6,8 @@ interface IHotels extends Document {
     image: String,
     price: Number
 }
+
+interface ICities extends Document {
+    name: string,
+    country: string
+}
