@@ -1,0 +1,7 @@
+{
+    "server": {
+        "env": "development",
+        "port": 5001,
+        "db": "mongodb://danielalza:danielalza123@ds235609.mlab.com:35609/myapi"    
+    }
+}
