@@ -23,5 +23,9 @@ describe('Test of Cities component', () => {
         return request(app).get('/cities')
             .expect(200).then((res) => expect(res.status).toEqual(200))
     });
+    it('It respond /city/id', () => {
+        return request(app).get('/city/5e0d8b167c213e47b9c54444')
+            .expect(200).then((res) => expect(res.status).toEqual(200))
+    });
 })
 

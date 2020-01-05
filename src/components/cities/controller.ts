@@ -9,5 +9,13 @@ export const ControllerCities = {
         } catch (error) {
             next({ error });
         }
+    },
+    city: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const city = await Services.getCity(req.params.id)
+            res.send({ city })
+        } catch (error) {
+            next({ error });
+        }
     }
 }

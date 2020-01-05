@@ -9,5 +9,13 @@ export const Services = {
         } catch (error) {
             return error
         }
+    },
+    getCity: async (id: string) => {
+        try {
+            const city = await Cities.findById(id)
+            return city
+        } catch (error) {
+            return error
+        }
     }
 }
