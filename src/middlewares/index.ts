@@ -1,5 +1,7 @@
+import { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import { Error } from '../interfaces';
 
 export const middlewareServer = {
     cors: {
@@ -10,5 +12,11 @@ export const middlewareServer = {
     },
     jsonParser: {
         handler: bodyParser.json()
+    }
+}
+
+export const errorMiddleware = {
+    errorHandler: (err: Error, req: Request, res: Response, next: NextFunction) => {
+        res.status(err.status || 500).send({ error: err.message || "problema de conexion" });
     }
 }

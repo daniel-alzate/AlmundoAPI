@@ -1,5 +1,10 @@
 import { Document } from 'mongoose';
 
+interface Error {
+    status?: number;
+    message?: string;
+}
+
 interface IHotels extends Document {
     name: String,
     stars: Number,

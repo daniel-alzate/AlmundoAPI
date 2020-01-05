@@ -2,6 +2,7 @@ process.env.NODE_CONFIG_DIR = `${__dirname}/config/env`;
 import InfraApp from './core';
 import { db } from './config/database';
 import { middlewareServer } from './middlewares';
+import { errorMiddleware } from './middlewares'
 import { routerServer } from './components/routes';
 
 export default class Server extends InfraApp {
@@ -10,6 +11,7 @@ export default class Server extends InfraApp {
         db.connect();
         this.mountMiddlewares(middlewareServer);
         this.mountRoutes(routerServer);
+        this.mountErrorMiddleware(errorMiddleware);
     }
     public static bootstrap(): Server {
         return new Server;

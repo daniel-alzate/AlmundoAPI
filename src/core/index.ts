@@ -20,6 +20,11 @@ export default class InfraApp {
             });
         });
     }
+    public mountErrorMiddleware(errorMiddleware: any): void {
+        Object.keys(errorMiddleware).forEach((key) => {
+            this.app.use(errorMiddleware[key]);
+        });
+    }
     public appStart(): void {
         this.app.listen(this.port, () => console.log('app listening'));
     }
