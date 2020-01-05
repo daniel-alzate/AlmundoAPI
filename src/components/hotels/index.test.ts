@@ -23,5 +23,9 @@ describe('Test of Hotels component', () => {
         return request(app).get('/hotels')
             .expect(200).then((res) => expect(res.status).toEqual(200))
     });
+    it('It respond /hotel/id', () => {
+        return request(app).get('/hotel/5e0d2fd57c213e47b9c5345b')
+            .expect(200).then((res) => expect(res.status).toEqual(200))
+    });
 })
 
