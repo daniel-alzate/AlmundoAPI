@@ -4,6 +4,7 @@ const HotelsSchema = new mongoose.Schema({
     name: String,
     stars: Number,
     image: String,
-    price: Number
+    price: Number,
+    amenities: [String]
 });
 export default HotelsSchema;

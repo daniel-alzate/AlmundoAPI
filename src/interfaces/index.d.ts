@@ -9,7 +9,8 @@ interface IHotels extends Document {
     name: String,
     stars: Number,
     image: String,
-    price: Number
+    price: Number,
+    amenities: String[]
 }
 
 interface ICities extends Document {
