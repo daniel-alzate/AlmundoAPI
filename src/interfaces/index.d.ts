@@ -13,6 +13,22 @@ interface IHotels extends Document {
     amenities: String[]
 }
 
+interface IHotelDetail extends Document {
+    name: String,
+    stars: Number,
+    image: String,
+    price: Number,
+    amenities: String[],
+    location: {
+        coordinate: {
+            latitude: Number,
+            longitude: Number
+        },
+        address: String
+    },
+    description: String
+}
+
 interface ICities extends Document {
     name: string,
     country: string
