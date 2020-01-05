@@ -1,5 +1,6 @@
 import config from 'config';
 import express from 'express';
+import { log } from '../config/logger';
 
 export default class InfraApp {
     private app: any;
@@ -26,6 +27,8 @@ export default class InfraApp {
         });
     }
     public appStart(): void {
-        this.app.listen(this.port, () => console.log('app listening'));
+        this.app.listen(this.port, () => {
+            log.info(`Server running in port ${this.port}`);
+        });
     }
 }

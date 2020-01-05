@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import { log } from '../config/logger';
 import { Error } from '../interfaces';
 
 export const middlewareServer = {
