@@ -12,7 +12,6 @@ export const services = {
     getHotelDetail: async (hotel_id: string) => {
         try {
             const hotelDetail = await HotelDetail.findOne({hotel_id:hotel_id})
-            console.log(hotelDetail)
             return hotelDetail
         } catch (error) {
             return error;

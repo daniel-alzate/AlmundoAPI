@@ -10,6 +10,15 @@ export const hotelsController = {
             next({ error });
         }
     },
+    getHotelsByCity: async (req: Request, res: Response, next: NextFunction) => {
+        const { id } = req.params;
+        try {
+            const hotelsByCity = await services.getHotelsByCity(id)
+            res.send({ hotelsByCity })
+        } catch (error) {
+            next({ error });
+        }
+    },
     getHotel: async (req: Request, res: Response, next: NextFunction) => {
         const { id } = req.params;
         try {

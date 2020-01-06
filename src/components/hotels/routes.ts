@@ -6,6 +6,11 @@ export const hotelRoutes = {
         mountPoint: '/hotels',
         handler: hotelsController.getHotels
     },
+    getHotelsByCity: {
+        verb: 'get',
+        mountPoint: '/hotelsByCity/:id',
+        handler: hotelsController.getHotelsByCity
+    },
     getHotel: {
         verb: 'get',
         mountPoint: '/hotel/:id',
