@@ -10,7 +10,12 @@ interface IHotels extends Document {
     stars: Number,
     image: String,
     price: Number,
-    amenities: String[]
+    amenities: String[],
+    city: {
+        id: String,
+        name: String,
+        country: String
+    }
 }
 
 interface IHotelDetail extends Document {

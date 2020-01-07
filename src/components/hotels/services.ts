@@ -11,7 +11,7 @@ export const services = {
     },
     getHotelsByCity: async (city_id: string) => {
         try {
-            const hotelsByCity = await Hotels.find({city_id: city_id})
+            const hotelsByCity = await Hotels.find({'city.id':city_id})
             console.log(hotelsByCity)
 
             return hotelsByCity
